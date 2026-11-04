@@ -1,0 +1,19 @@
+{
+  "name": "karaoke-duet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multiplayer karaoke duet game with pitch scoring",
+  "scripts": {
+    "prepare-www": "mkdir -p www && cp node_modules/peerjs/dist/peerjs.min.js www/peerjs.min.js",
+    "android:add": "npx cap add android && node scripts/patch-android.mjs",
+    "sync": "npm run prepare-www && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "peerjs": "^1.5.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.0"
+  }
+}
